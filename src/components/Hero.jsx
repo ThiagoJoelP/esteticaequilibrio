@@ -11,11 +11,12 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
-      <div className="hero__bg" />
-      <div className="hero__circles">
-        <div className="hero__circle hero__circle--1" />
-        <div className="hero__circle hero__circle--2" />
+      {/* Background image with blur - replace src later */}
+      <div className="hero__bg-image">
+        {/* Placeholder: reemplazar con la imagen real */}
+        <div className="hero__bg-placeholder">Tu imagen de fondo aquí</div>
       </div>
+      <div className="hero__overlay" />
 
       <div className={`hero__content ${visible ? 'hero__content--visible' : ''}`}>
         <span className="hero__badge">Estética Corporal & Facial</span>
@@ -33,17 +34,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Placeholder para imagen - reemplazar después */}
-      <div className={`hero__image ${visible ? 'hero__image--visible' : ''}`}>
-        <div className="hero__image-placeholder">
-          <span>📷</span>
-          <span>Tu imagen aquí</span>
-          <small>Camilla estética / maquinaria moderna</small>
-        </div>
-      </div>
-
-      <div className="hero__scroll">
-        <div className="hero__scroll-line" />
+      {/* Wave animation at the bottom */}
+      <div className="hero__waves">
+        <svg className="hero__wave hero__wave--1" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" />
+        </svg>
+        <svg className="hero__wave hero__wave--2" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C240,30 480,100 720,60 C960,20 1200,90 1440,50 L1440,120 L0,120 Z" />
+        </svg>
+        <svg className="hero__wave hero__wave--3" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,40 C180,100 540,10 900,70 C1080,90 1320,40 1440,80 L1440,120 L0,120 Z" />
+        </svg>
       </div>
     </section>
   )
