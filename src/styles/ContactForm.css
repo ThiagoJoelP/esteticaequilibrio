@@ -81,6 +81,11 @@
   margin-bottom: 0.7rem;
 }
 
+.cf__required {
+  color: #c0392b;
+  font-weight: 700;
+}
+
 .cf__input {
   width: 100%;
   padding: 0.8rem 1rem;
@@ -99,6 +104,17 @@
 
 .cf__input::placeholder {
   color: var(--color-text-muted);
+}
+
+.cf__input--error {
+  border-color: #c0392b;
+}
+
+.cf__error-msg {
+  display: block;
+  font-size: 0.75rem;
+  color: #c0392b;
+  margin-top: 0.3rem;
 }
 
 .cf__chips {
@@ -142,10 +158,10 @@
   border-radius: 4px;
   padding: 1.2rem 1.4rem;
   margin-bottom: 1.8rem;
-  animation: fadeInUp 0.4s var(--ease-out);
+  animation: cfFadeIn 0.4s var(--ease-out);
 }
 
-@keyframes fadeInUp {
+@keyframes cfFadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
