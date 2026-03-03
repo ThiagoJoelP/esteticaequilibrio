@@ -41,9 +41,12 @@
 }
 
 .benefit__icon {
-  font-size: 1.6rem;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
   display: block;
   margin-bottom: 1rem;
+  opacity: 0.65;
 }
 
 .benefit__title {
