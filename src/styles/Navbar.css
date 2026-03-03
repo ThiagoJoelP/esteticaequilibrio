@@ -4,15 +4,16 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 1.2rem 0;
+  padding: 0.9rem 0;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 var(--color-border);
   transition: all 0.4s var(--ease-out);
 }
 
 .nav--scrolled {
-  background: rgba(240, 246, 251, 0.97);
-  backdrop-filter: blur(16px);
-  padding: 0.8rem 0;
-  box-shadow: 0 1px 0 var(--color-border);
+  padding: 0.7rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .nav__inner {
@@ -124,7 +125,7 @@
   .nav__links {
     position: fixed;
     inset: 0;
-    background: var(--color-cream);
+    background: var(--color-white);
     flex-direction: column;
     align-items: center;
     justify-content: center;
