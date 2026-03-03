@@ -1,0 +1,70 @@
+:root {
+  --color-cream: #F5F0EB;
+  --color-warm-white: #FAF8F5;
+  --color-sand: #D4C5B2;
+  --color-bronze: #8B7355;
+  --color-bronze-light: #A6906F;
+  --color-dark: #2C2421;
+  --color-dark-soft: #3D3330;
+  --color-olive: #6B6B52;
+  --color-rose: #C4A68A;
+  --color-rose-soft: #E8D5C4;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', sans-serif;
+
+  --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-warm-white);
+  color: var(--color-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--color-rose-soft);
+  color: var(--color-dark);
+}
