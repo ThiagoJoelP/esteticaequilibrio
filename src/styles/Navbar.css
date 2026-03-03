@@ -5,15 +5,14 @@
   width: 100%;
   z-index: 100;
   padding: 0.9rem 0;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 var(--color-border);
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   transition: all 0.4s var(--ease-out);
 }
 
 .nav--scrolled {
   padding: 0.7rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav__inner {
@@ -125,7 +124,7 @@
   .nav__links {
     position: fixed;
     inset: 0;
-    background: var(--color-white);
+    background: #FFFFFF;
     flex-direction: column;
     align-items: center;
     justify-content: center;
