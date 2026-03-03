@@ -1,19 +1,19 @@
 :root {
-  /* Palette */
-  --color-cream: #FDF8F0;
+  /* Palette - Blue brand #1E88D8 */
+  --color-cream: #F0F6FB;
   --color-white: #FFFFFF;
-  --color-beige: #F5EDE3;
-  --color-beige-dark: #E8DDD0;
-  --color-gold: #C9A96E;
-  --color-gold-light: #D4BC8B;
-  --color-gold-dark: #A88B4A;
-  --color-blue: #A8C5D6;
-  --color-blue-light: #D0E4EF;
-  --color-blue-dark: #7BA3B8;
-  --color-text: #2D2A26;
-  --color-text-soft: #6B655C;
-  --color-text-muted: #9B9488;
-  --color-border: rgba(201, 169, 110, 0.15);
+  --color-beige: #E3EEF7;
+  --color-beige-dark: #C9DCE9;
+  --color-gold: #1E88D8;
+  --color-gold-light: #4DA3E8;
+  --color-gold-dark: #1565A8;
+  --color-blue: #1E88D8;
+  --color-blue-light: #4DA3E8;
+  --color-blue-dark: #1565A8;
+  --color-text: #1A2332;
+  --color-text-soft: #4A5568;
+  --color-text-muted: #8494A7;
+  --color-border: rgba(30, 136, 216, 0.12);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -61,12 +61,12 @@ input, select, textarea { font-family: inherit; }
 
 ::selection {
   background: var(--color-gold-light);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-beige); }
-::-webkit-scrollbar-thumb { background: var(--color-gold-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 3px; }
 
 /* Utility */
 .container {
