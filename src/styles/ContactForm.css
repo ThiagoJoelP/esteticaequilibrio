@@ -1,0 +1,223 @@
+.contact {
+  padding: var(--section-padding);
+  background: var(--color-white);
+}
+
+.contact__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s var(--ease-out);
+}
+
+.contact__inner--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact__desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text-soft);
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact__data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__data-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.contact__data-item > span:first-child {
+  font-size: 1.2rem;
+}
+
+.contact__data-item strong {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.contact__data-item span:last-child {
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+/* Form */
+.contact__form-wrap {
+  background: var(--color-cream);
+  border-radius: 6px;
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--color-border);
+}
+
+.cf__group {
+  margin-bottom: 1.8rem;
+}
+
+.cf__label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  margin-bottom: 0.7rem;
+}
+
+.cf__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--color-beige-dark);
+  border-radius: 3px;
+  background: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.cf__input:focus {
+  border-color: var(--color-gold);
+}
+
+.cf__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.cf__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cf__chip {
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--color-beige-dark);
+  border-radius: 3px;
+  background: var(--color-white);
+  color: var(--color-text-soft);
+  transition: all 0.25s var(--ease-out);
+}
+
+.cf__chip:hover {
+  border-color: var(--color-gold-light);
+  color: var(--color-gold);
+}
+
+.cf__chip--active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.cf__chip--active:hover {
+  background: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+/* Preview */
+.cf__preview {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.8rem;
+  animation: fadeInUp 0.4s var(--ease-out);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cf__preview-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+.cf__preview-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* Send buttons */
+.cf__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.cf__send {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.8rem 1.6rem;
+  border-radius: 3px;
+  transition: all 0.3s var(--ease-out);
+}
+
+.cf__send:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cf__send--wa {
+  background: #25D366;
+  color: white;
+}
+
+.cf__send--wa:hover:not(:disabled) {
+  background: #1EBE57;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+}
+
+.cf__send--email {
+  background: var(--color-gold);
+  color: white;
+}
+
+.cf__send--email:hover:not(:disabled) {
+  background: var(--color-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.25);
+}
+
+@media (max-width: 768px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
