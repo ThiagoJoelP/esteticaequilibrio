@@ -42,7 +42,7 @@ const Testimonials = () => {
         <div className="test__grid">
           {testimonials.map((t, i) => (
             <div className="test-card" key={i}>
-              <div className="test-card__quote">“</div>
+              <div className="test-card__quote">&ldquo;</div>
               <p className="test-card__text">{t.text}</p>
               <div className="test-card__author">
                 <div className="test-card__avatar">{t.name[0]}</div>
@@ -53,19 +53,6 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Placeholder para fotos del centro */}
-        <div className="test__photos">
-          <div className="test__photo-placeholder">
-            <span>📷</span> Foto del centro 1
-          </div>
-          <div className="test__photo-placeholder">
-            <span>📷</span> Foto del centro 2
-          </div>
-          <div className="test__photo-placeholder">
-            <span>📷</span> Foto del centro 3
-          </div>
         </div>
       </div>
     </section>
