@@ -1,57 +1,47 @@
 import React, { useState, useEffect } from 'react'
-import './Navbar.css'
+import '../styles/Navbar.css'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
+    const handleScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
+  const links = [
     { name: 'Inicio', href: '#hero' },
-    { name: 'Nosotros', href: '#about' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Galería', href: '#gallery' },
-    { name: 'Testimonios', href: '#testimonials' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Servicios', href: '#servicios' },
+    { name: 'Beneficios', href: '#beneficios' },
+    { name: 'Contacto', href: '#contacto' },
+    { name: 'Testimonios', href: '#testimonios' },
   ]
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__container">
-        <a href="#hero" className="navbar__logo">
-          <span className="navbar__logo-icon">✦</span>
-          <span className="navbar__logo-text">Equilibrio</span>
+    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+      <div className="nav__inner">
+        <a href="#hero" className="nav__logo">
+          <span className="nav__logo-mark">E</span>
+          <span className="nav__logo-text">Equilibrio</span>
         </a>
 
-        <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className="navbar__link"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+        <ul className={`nav__links ${menuOpen ? 'nav__links--open' : ''}`}>
+          {links.map(l => (
+            <li key={l.name}>
+              <a href={l.href} className="nav__link" onClick={() => setMenuOpen(false)}>{l.name}</a>
             </li>
           ))}
+          <li className="nav__links-cta-mobile">
+            <a href="#contacto" className="nav__cta" onClick={() => setMenuOpen(false)}>Reservar</a>
+          </li>
         </ul>
 
-        <a href="#contact" className="navbar__cta">Reservar Cita</a>
+        <a href="#contacto" className="nav__cta nav__cta--desktop">Reservar Sesión</a>
 
-        <button
-          className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menú"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+        <button className={`nav__burger ${menuOpen ? 'nav__burger--open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menú">
+          <span /><span /><span />
         </button>
       </div>
     </nav>

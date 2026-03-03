@@ -1,39 +1,49 @@
 import React, { useEffect, useState } from 'react'
-import './Hero.css'
+import '../styles/Hero.css'
 
 const Hero = () => {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 200)
-    return () => clearTimeout(timer)
+    const t = setTimeout(() => setVisible(true), 150)
+    return () => clearTimeout(t)
   }, [])
 
   return (
     <section id="hero" className="hero">
-      <div className="hero__bg-pattern"></div>
-      <div className="hero__overlay"></div>
-      
+      <div className="hero__bg" />
+      <div className="hero__circles">
+        <div className="hero__circle hero__circle--1" />
+        <div className="hero__circle hero__circle--2" />
+      </div>
+
       <div className={`hero__content ${visible ? 'hero__content--visible' : ''}`}>
-        <span className="hero__badge">✦ Centro de Estética Integral</span>
+        <span className="hero__badge">Estética Corporal & Facial</span>
         <h1 className="hero__title">
-          Tu belleza,
-          <br />
-          <em>en equilibrio</em>
+          Bienestar y tecnología<br />
+          estética <em>para tu cuerpo</em>
         </h1>
-        <p className="hero__subtitle">
-          Descubrí un espacio donde el bienestar y la belleza se encuentran.
-          Tratamientos personalizados que realzan tu esencia natural.
+        <p className="hero__sub">
+          Tratamientos personalizados con tecnología de última generación.
+          Resultados visibles desde la primera sesión.
         </p>
         <div className="hero__actions">
-          <a href="#contact" className="hero__btn hero__btn--primary">Agendar Turno</a>
-          <a href="#services" className="hero__btn hero__btn--secondary">Ver Servicios</a>
+          <a href="#contacto" className="hero__btn hero__btn--primary">Reservar tu sesión</a>
+          <a href="#servicios" className="hero__btn hero__btn--ghost">Ver servicios</a>
         </div>
       </div>
 
-      <div className="hero__scroll-indicator">
-        <span>Scroll</span>
-        <div className="hero__scroll-line"></div>
+      {/* Placeholder para imagen - reemplazar después */}
+      <div className={`hero__image ${visible ? 'hero__image--visible' : ''}`}>
+        <div className="hero__image-placeholder">
+          <span>📷</span>
+          <span>Tu imagen aquí</span>
+          <small>Camilla estética / maquinaria moderna</small>
+        </div>
+      </div>
+
+      <div className="hero__scroll">
+        <div className="hero__scroll-line" />
       </div>
     </section>
   )
