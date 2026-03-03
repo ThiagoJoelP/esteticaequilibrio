@@ -58,7 +58,7 @@
 .svc-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-gold-light);
-  box-shadow: 0 15px 40px rgba(201, 169, 110, 0.1);
+  box-shadow: 0 15px 40px rgba(30, 136, 216, 0.12);
 }
 
 .svc-card__img {
