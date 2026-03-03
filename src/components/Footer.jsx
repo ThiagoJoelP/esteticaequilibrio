@@ -31,11 +31,10 @@ const Footer = () => {
           </div>
 
           <div className="footer__col">
-            <h4 className="footer__col-title">Contacto</h4>
-            <a href="https://wa.me/5493541000000" target="_blank" rel="noopener">WhatsApp</a>
-            <a href="mailto:info@esteticaequilibrio.com">Email</a>
-            <span>Av. San Martín 1234</span>
-            <span>Villa Carlos Paz, Córdoba</span>
+            <h4 className="footer__col-title">Ubicación</h4>
+            <span>Buenos Aires, Fleming y,</span>
+            <span>X5152 Villa Carlos Paz,</span>
+            <span>Córdoba</span>
           </div>
         </div>
 
