@@ -40,8 +40,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <span>© 2026 Estética Equilibrio. Todos los derechos reservados.</span>
-          <span className="footer__disclaimer">Los tratamientos ofrecidos son estéticos, no médicos.</span>
+          <span>&copy; 2026 Estética Equilibrio. Todos los derechos reservados.</span>
         </div>
       </div>
     </footer>
