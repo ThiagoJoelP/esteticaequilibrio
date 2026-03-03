@@ -7,30 +7,35 @@ export const SERVICES = [
     icon: '◈',
     title: 'Radiofrecuencia',
     desc: 'Estimula la producción de colágeno y elastina, logrando una piel más firme y rejuvenecida sin cirugía.',
+    image: '/radiofrecuencia.png',
   },
   {
     id: 'electroestimulacion',
     icon: '⚡',
     title: 'Electroestimulación',
     desc: 'Tonificación muscular profunda mediante impulsos eléctricos que modelan tu silueta de forma segura.',
+    image: null,
   },
   {
     id: 'masajes',
     icon: '✦',
     title: 'Masajes Reductores',
     desc: 'Técnicas manuales especializadas que activan la circulación y ayudan a reducir medidas de forma natural.',
+    image: null,
   },
   {
     id: 'criolipólisis',
     icon: '❄',
     title: 'Criolipólisis',
     desc: 'Eliminación de grasa localizada por frío controlado. Un procedimiento no invasivo con resultados duraderos.',
+    image: null,
   },
   {
     id: 'reafirmacion',
     icon: '✧',
     title: 'Reafirmación y Cuidado de Piel',
     desc: 'Tratamientos faciales y corporales que nutren, hidratan y devuelven la luminosidad natural de tu piel.',
+    image: null,
   },
 ]
 
@@ -50,7 +55,6 @@ const Services = () => {
   const handleInfo = (serviceId) => {
     const el = document.getElementById('contacto')
     if (el) el.scrollIntoView({ behavior: 'smooth' })
-    // Dispatch custom event to preselect service
     window.dispatchEvent(new CustomEvent('selectService', { detail: serviceId }))
   }
 
@@ -66,10 +70,15 @@ const Services = () => {
         <div className="services__grid">
           {SERVICES.map((s, i) => (
             <div className="svc-card" key={s.id} style={{ animationDelay: `${i * 0.08}s` }}>
-              {/* Placeholder para imagen del servicio */}
               <div className="svc-card__img">
-                <span>{s.icon}</span>
-                <small>📷 Imagen</small>
+                {s.image ? (
+                  <img src={s.image} alt={s.title} className="svc-card__photo" />
+                ) : (
+                  <>
+                    <span>{s.icon}</span>
+                    <small>📷 Imagen</small>
+                  </>
+                )}
               </div>
               <div className="svc-card__body">
                 <h3 className="svc-card__title">{s.title}</h3>
