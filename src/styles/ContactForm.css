@@ -220,17 +220,6 @@
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
 }
 
-.cf__send--email {
-  background: var(--color-gold);
-  color: white;
-}
-
-.cf__send--email:hover:not(:disabled) {
-  background: var(--color-gold-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.25);
-}
-
 @media (max-width: 768px) {
   .contact__inner {
     grid-template-columns: 1fr;
