@@ -23,8 +23,11 @@ const Navbar = () => {
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner">
         <a href="#hero" className="nav__logo">
-          <span className="nav__logo-mark">E</span>
-          <span className="nav__logo-text">Equilibrio</span>
+          <img src="/logoequilibrio.jpg" alt="Estética Equilibrio" className="nav__logo-img" />
+          <div className="nav__logo-text-wrap">
+            <span className="nav__logo-text">Estética Equilibrio</span>
+            <span className="nav__logo-tagline">Más salud</span>
+          </div>
         </a>
 
         <ul className={`nav__links ${menuOpen ? 'nav__links--open' : ''}`}>
