@@ -8,10 +8,13 @@ const Footer = () => {
         <div className="footer__top">
           <div className="footer__brand">
             <div className="footer__logo">
-              <span className="footer__logo-mark">E</span>
-              <span className="footer__logo-text">Estética Equilibrio</span>
+              <img src="/logoequilibrio.jpg" alt="Estética Equilibrio" className="footer__logo-img" />
+              <div className="footer__logo-text-wrap">
+                <span className="footer__logo-text">Estética Equilibrio</span>
+                <span className="footer__logo-tagline">Más salud</span>
+              </div>
             </div>
-            <p className="footer__tagline">Bienestar y tecnología estética para tu cuerpo.</p>
+            <p className="footer__desc">Bienestar y tecnología estética para tu cuerpo.</p>
           </div>
 
           <div className="footer__col">
