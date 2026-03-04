@@ -44,6 +44,13 @@ export const SERVICES = [
     desc: 'Programa integral que combina múltiples técnicas en una misma sesión para reducir medidas, reafirmar tejidos, combatir la celulitis y esculpir tu figura de manera progresiva y efectiva.',
     image: '/circuitoreductor.png',
   },
+  {
+    id: 'hifu-7d',
+    icon: '🔬',
+    title: 'Hifu 7D - Corporal y facial',
+    desc: 'Ultrasonido focalizado de alta intensidad con tecnología 7D que actúa en las capas profundas de la piel para tensar, reafirmar y rejuvenecer tanto el rostro como el cuerpo, estimulando la producción natural de colágeno sin cirugía ni tiempo de recuperación.',
+    image: '/hifu7d.png',
+  },
 ]
 
 const Services = () => {
