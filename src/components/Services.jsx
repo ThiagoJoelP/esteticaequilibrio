@@ -31,11 +31,18 @@ export const SERVICES = [
     image: '/criolipolisis.png',
   },
   {
-    id: 'reafirmacion',
-    icon: '✧',
-    title: 'Reafirmación y Cuidado de Piel',
-    desc: 'Tratamientos faciales y corporales que nutren, hidratan y devuelven la luminosidad natural de tu piel.',
-    image: '/reafirmación-y-cuidado-de-piel.png',
+    id: 'mesoterapia',
+    icon: '💉',
+    title: 'Mesoterapia corporal',
+    desc: 'Microinyecciones de principios activos que actúan directamente sobre la grasa localizada y la celulitis, mejorando la textura de la piel y favoreciendo el drenaje de toxinas.',
+    image: '/mesoterapia.png',
+  },
+  {
+    id: 'circuito-reductor',
+    icon: '🔄',
+    title: 'Circuito reductor, reafirmante, anticelulítico y modelador',
+    desc: 'Programa integral que combina múltiples técnicas en una misma sesión para reducir medidas, reafirmar tejidos, combatir la celulitis y esculpir tu figura de manera progresiva y efectiva.',
+    image: '/circuitoreductor.png',
   },
 ]
 
