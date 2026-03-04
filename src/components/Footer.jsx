@@ -31,6 +31,8 @@ const Footer = () => {
             <a href="#servicios">Electroestimulación</a>
             <a href="#servicios">Masajes Reductores</a>
             <a href="#servicios">Criolipólisis</a>
+            <a href="#servicios">Mesoterapia</a>
+            <a href="#servicios">Circuitos corporales</a>
           </div>
 
           <div className="footer__col">
